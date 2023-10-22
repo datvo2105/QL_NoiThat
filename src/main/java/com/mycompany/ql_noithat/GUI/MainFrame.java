@@ -291,6 +291,11 @@ public class MainFrame extends javax.swing.JFrame {
                 tableSuplier.setViewportView(listSupplier);
 
                 btn_searchSupplier.setText("Tìm Kiếm");
+                btn_searchSupplier.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_searchSupplierActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_SupplierLayout = new javax.swing.GroupLayout(panel_Supplier);
                 panel_Supplier.setLayout(panel_SupplierLayout);
@@ -330,7 +335,7 @@ public class MainFrame extends javax.swing.JFrame {
 
                 mainPanel.addTab("NSX", panel_Supplier);
 
-                jPanel3.setLayout(new java.awt.GridLayout());
+                jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
                 listCategory.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -356,10 +361,25 @@ public class MainFrame extends javax.swing.JFrame {
                 jLabel15.setText("Tên Danh Mục");
 
                 btn_editCategory.setText("Sửa");
+                btn_editCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_editCategoryActionPerformed(evt);
+                        }
+                });
 
                 btn_addCategory.setText("Thêm");
+                btn_addCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_addCategoryActionPerformed(evt);
+                        }
+                });
 
                 btn_deleteCategory.setText("Xóa");
+                btn_deleteCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_deleteCategoryActionPerformed(evt);
+                        }
+                });
 
                 jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
                 jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -387,7 +407,7 @@ public class MainFrame extends javax.swing.JFrame {
                                                 .addComponent(btn_deleteCategory)))
                                 .addContainerGap())
                         .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                 );
                 infoCategoryLayout.setVerticalGroup(
                         infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,12 +423,16 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_CategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 602, Short.MAX_VALUE)
-                                .addGroup(infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(btn_editCategory)
-                                        .addComponent(btn_addCategory)
-                                        .addComponent(btn_deleteCategory))
-                                .addContainerGap())
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 594, Short.MAX_VALUE)
+                                .addGroup(infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoCategoryLayout.createSequentialGroup()
+                                                .addGroup(infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(btn_editCategory)
+                                                        .addComponent(btn_addCategory))
+                                                .addContainerGap())
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoCategoryLayout.createSequentialGroup()
+                                                .addComponent(btn_deleteCategory)
+                                                .addGap(14, 14, 14))))
                 );
 
                 jPanel3.add(infoCategory);
@@ -418,8 +442,24 @@ public class MainFrame extends javax.swing.JFrame {
                 jLabel13.setText("Danh Sách Danh Mục");
 
                 btn_refleshCategory.setText("Làm Mới");
+                btn_refleshCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_refleshCategoryActionPerformed(evt);
+                        }
+                });
+
+                txt_searchCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                txt_searchCategoryActionPerformed(evt);
+                        }
+                });
 
                 btn_seachCategory.setText("Tìm Kiếm");
+                btn_seachCategory.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_seachCategoryActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_CategoryLayout = new javax.swing.GroupLayout(panel_Category);
                 panel_Category.setLayout(panel_CategoryLayout);
@@ -459,6 +499,11 @@ public class MainFrame extends javax.swing.JFrame {
                 jLabel16.setText("Danh Sách Sản Phẩm");
 
                 btn_refleshProduct.setText("Làm Mới");
+                btn_refleshProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_refleshProductActionPerformed(evt);
+                        }
+                });
 
                 listProduct.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -509,10 +554,25 @@ public class MainFrame extends javax.swing.JFrame {
                 jScrollPane1.setViewportView(txt_ProductDesc);
 
                 btn_editProduct.setText("Sửa");
+                btn_editProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_editProductActionPerformed(evt);
+                        }
+                });
 
                 txt_addProduct.setText("Thêm");
+                txt_addProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                txt_addProductActionPerformed(evt);
+                        }
+                });
 
                 btn_deleteProduct.setText("Xóa");
+                btn_deleteProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_deleteProductActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout infoProductLayout = new javax.swing.GroupLayout(infoProduct);
                 infoProduct.setLayout(infoProductLayout);
@@ -579,6 +639,17 @@ public class MainFrame extends javax.swing.JFrame {
                 );
 
                 btn_searchProduct.setText("Tìm Kiếm");
+                btn_searchProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_searchProductActionPerformed(evt);
+                        }
+                });
+
+                txt_searchProduct.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                txt_searchProductActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_ProductLayout = new javax.swing.GroupLayout(panel_Product);
                 panel_Product.setLayout(panel_ProductLayout);
@@ -657,7 +728,7 @@ public class MainFrame extends javax.swing.JFrame {
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 980, Short.MAX_VALUE)
+                        .addComponent(mainPanel)
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -689,6 +760,58 @@ public class MainFrame extends javax.swing.JFrame {
 
         private void btn_userInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_userInfoActionPerformed
         }//GEN-LAST:event_btn_userInfoActionPerformed
+
+        private void btn_searchSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_searchSupplierActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_searchSupplierActionPerformed
+
+        private void btn_refleshCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refleshCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_refleshCategoryActionPerformed
+
+        private void txt_searchCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_searchCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_txt_searchCategoryActionPerformed
+
+        private void btn_seachCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_seachCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_seachCategoryActionPerformed
+
+        private void btn_editCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_editCategoryActionPerformed
+
+        private void btn_addCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_addCategoryActionPerformed
+
+        private void btn_deleteCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteCategoryActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_deleteCategoryActionPerformed
+
+        private void btn_refleshProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refleshProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_refleshProductActionPerformed
+
+        private void txt_searchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_searchProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_txt_searchProductActionPerformed
+
+        private void btn_searchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_searchProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_searchProductActionPerformed
+
+        private void btn_editProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_editProductActionPerformed
+
+        private void txt_addProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_addProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_txt_addProductActionPerformed
+
+        private void btn_deleteProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteProductActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_deleteProductActionPerformed
 
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
