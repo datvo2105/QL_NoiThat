@@ -6,13 +6,9 @@ package com.mycompany.ql_noithat;
 
 import com.mycompany.ql_noithat.GUI.ConnectDB;
 
-/**
- *
- * @author vogiadat
- */
 public class QL_NoiThat {
 
     public static void main(String[] args) {
-	    new ConnectDB().setVisible(true);
+        new ConnectDB().setVisible(true);
     }
 }

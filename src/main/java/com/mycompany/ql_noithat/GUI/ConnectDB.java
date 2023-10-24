@@ -60,7 +60,7 @@ public class ConnectDB extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Port:");
 
-        txtPort.setText("13633");
+        txtPort.setText("19536");
 
         txtSID.setText("orcl");
 
