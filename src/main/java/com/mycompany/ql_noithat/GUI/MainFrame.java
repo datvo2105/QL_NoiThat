@@ -19,6 +19,7 @@ public class MainFrame extends javax.swing.JFrame {
     private CategoryDB categoryDB = new CategoryDB();
 
     private Supplier selectedSupplier = null;
+    private Category selectedCategory = null;
 
     public MainFrame() {
         initComponents();
@@ -889,6 +890,14 @@ public class MainFrame extends javax.swing.JFrame {
         return supplier;
     }
 
+    private Category mapToCategory(int selectedRow) {
+        // Retrieve the data from the selected row and create a Supplier object
+        Category category = new Category();
+        category.setCategoryId((int) listCategory.getValueAt(selectedRow, 0));
+        category.setCategoryName((String) listCategory.getValueAt(selectedRow, 1));
+        return category;
+    }
+
     private void listSupplierMouseClicked(java.awt.event.MouseEvent evt) {
         int selectedRow = listSupplier.getSelectedRow();
         if (selectedRow >= 0) {
@@ -908,7 +917,12 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void listCategoryMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_listCategoryMouseClicked
-        // TODO add your handling code here:
+        int selectedRow = listCategory.getSelectedRow();
+        if (selectedRow >= 0) {
+            selectedCategory = mapToCategory(selectedRow);
+            txt_CategoryId.setText(String.valueOf(selectedCategory.getCategoryId()));
+            txt_CategoryName.setText(String.valueOf(selectedCategory.getCategoryName()));
+        }
     }// GEN-LAST:event_listCategoryMouseClicked
 
     private void listProductMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_listProductMouseClicked
@@ -980,7 +994,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btn_searchSupplierActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_searchSupplierActionPerformed
 
-    }// GEN-LAST:event_btn_searchSupplierActionPerformed
+    }
 
     private void btn_refleshCategoryActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_refleshCategoryActionPerformed
         this.InitData();
@@ -995,15 +1009,37 @@ public class MainFrame extends javax.swing.JFrame {
     }// GEN-LAST:event_btn_seachCategoryActionPerformed
 
     private void btn_editCategoryActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_editCategoryActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_btn_editCategoryActionPerformed
+        if (selectedCategory != null) {
+            Category category = new Category(
+                    Integer.parseInt(txt_CategoryId.getText()),
+                    txt_CategoryName.getText());
+
+            boolean isUpdated = categoryDB.updateCategory(category);
+            JOptionPane.showMessageDialog(rootPane,
+                    isUpdated ? "update thành công" : "update thất bại vui lòng kiểm tra lại dữ liệu đầu vào");
+            this.InitData();
+        }
+    }
 
     private void btn_addCategoryActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_addCategoryActionPerformed
-        // TODO add your handling code here:
+        Category category = new Category(
+                0,
+                txt_CategoryName.getText());
+        boolean isAdded = categoryDB.createCategory(category);
+        JOptionPane.showMessageDialog(rootPane,
+                isAdded ? "thêm thành công" : "thêm thất bại vui lòng kiểm tra lại dữ liệu đầu vào");
+        this.InitData();
+
     }// GEN-LAST:event_btn_addCategoryActionPerformed
 
     private void btn_deleteCategoryActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_deleteCategoryActionPerformed
-        // TODO add your handling code here:
+        if (selectedCategory != null) {
+            boolean isDeleted = categoryDB.deleteCategory(selectedCategory.getCategoryId());
+            JOptionPane.showMessageDialog(rootPane,
+                    isDeleted ? "xoá thành công" : "xoá thất bại");
+            this.InitData();
+
+        }
     }// GEN-LAST:event_btn_deleteCategoryActionPerformed
 
     private void btn_refleshProductActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_refleshProductActionPerformed

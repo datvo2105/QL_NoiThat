@@ -49,7 +49,7 @@ public class CategoryDB {
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
             statement.setInt(1, category.getCategoryId());
-            statement.setString(1, category.getCategoryName());
+            statement.setString(2, category.getCategoryName());
 
             int rowsInserted = statement.executeUpdate();
 
