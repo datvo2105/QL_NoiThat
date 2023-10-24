@@ -59,4 +59,47 @@ public class SupplierDB {
             return false; // Insertion failed
         }
     }
+
+    public boolean updateSupplier(Supplier supplier) {
+        String insertQuery = "{CALL UPDATESUPPLIER(?,?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+
+        try (
+                PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
+            statement.setInt(1, supplier.getSupplierId());
+            statement.setString(2, supplier.getSupplierName());
+            statement.setString(3, supplier.getContactName());
+            statement.setString(4, supplier.getContactEmail());
+            statement.setString(5, supplier.getContactPhone());
+            statement.setString(6, supplier.getAddress());
+            statement.setString(7, supplier.getCity());
+            statement.setString(8, supplier.getState());
+            statement.setString(9, supplier.getPostalCode());
+            statement.setString(10, supplier.getCountry());
+
+            int rowsInserted = statement.executeUpdate();
+
+            // Check if the insertion was successful
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false; // Insertion failed
+        }
+    }
+
+    public boolean deleteSupplier(int id) {
+        String insertQuery = "{CALL DELETESUPPLIERBYID(?)}";
+
+        try (
+                PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
+            statement.setInt(1, id);
+            int rowsInserted = statement.executeUpdate();
+
+            // Check if the insertion was successful
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false; // Insertion failed
+        }
+    }
+
 }
