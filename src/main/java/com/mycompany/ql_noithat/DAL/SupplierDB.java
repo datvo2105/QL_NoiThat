@@ -10,7 +10,7 @@ public class SupplierDB {
     public List<Supplier> getAllSuppliers() {
         List<Supplier> suppliers = new ArrayList<>();
         try {
-            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(GET_SUPPLIER(''))");
+            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_SUPPLIER(''))");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -36,7 +36,7 @@ public class SupplierDB {
     }
 
     public boolean createSupplier(Supplier supplier) {
-        String insertQuery = "{CALL INSERTSUPPLIER(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String insertQuery = "{CALL DEV.INSERTSUPPLIER(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -61,7 +61,7 @@ public class SupplierDB {
     }
 
     public boolean updateSupplier(Supplier supplier) {
-        String insertQuery = "{CALL UPDATESUPPLIER(?,?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String insertQuery = "{CALL DEV.UPDATESUPPLIER(?,?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -87,7 +87,7 @@ public class SupplierDB {
     }
 
     public boolean deleteSupplier(int id) {
-        String insertQuery = "{CALL DELETESUPPLIERBYID(?)}";
+        String insertQuery = "{CALL DEV.DELETESUPPLIERBYID(?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {

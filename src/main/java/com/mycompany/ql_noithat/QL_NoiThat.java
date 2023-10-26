@@ -4,11 +4,23 @@
 
 package com.mycompany.ql_noithat;
 
-import com.mycompany.ql_noithat.GUI.ConnectDB;
+import com.mycompany.ql_noithat.DAL.DB;
+import com.mycompany.ql_noithat.GUI.MainFrame;
 
 public class QL_NoiThat {
 
     public static void main(String[] args) {
-        new ConnectDB().setVisible(true);
+        try {
+            DB.server = "0.tcp.ap.ngrok.io:14824:noithat";
+            DB.user = "kh1";
+            DB.pass = "1";
+            var conn = DB.getConnect();
+
+            if (conn == null)
+                throw new Error("connect faild");
+            new MainFrame().setVisible(true);
+        } catch (Exception e) {
+
+        }
     }
 }

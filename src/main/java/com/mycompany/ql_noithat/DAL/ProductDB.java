@@ -10,7 +10,7 @@ public class ProductDB {
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
         try {
-            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(GET_PRODUCTS(''))");
+            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCTS(''))");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -30,7 +30,7 @@ public class ProductDB {
     }
 
     public boolean createProduct(Product product) {
-        String insertQuery = "{CALL ADDPRODUCT(?,?,?,?)}";
+        String insertQuery = "{CALL DEV.ADDPRODUCT(?,?,?,?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -49,7 +49,7 @@ public class ProductDB {
     }
 
     public boolean updateProduct(Product product) {
-        String insertQuery = "{CALL UPDATEPRODUCT(?,?,?,?,?)}";
+        String insertQuery = "{CALL DEV.UPDATEPRODUCT(?,?,?,?,?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -68,7 +68,7 @@ public class ProductDB {
     }
 
     public boolean deleteProduct(int id) {
-        String insertQuery = "{CALL DELETEPRODUCT(?)}";
+        String insertQuery = "{CALL DEV.DELETEPRODUCT(?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {

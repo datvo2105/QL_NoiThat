@@ -50,7 +50,7 @@ public class ConnectDB extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Host:");
 
-        txtHost.setText("0.tcp.ap.ngrok.io");
+        txtHost.setText("192.168.22.134");
         txtHost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHostActionPerformed(evt);
@@ -60,7 +60,7 @@ public class ConnectDB extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Port:");
 
-        txtPort.setText("19536");
+        txtPort.setText("1521");
 
         txtSID.setText("orcl");
 
@@ -220,8 +220,8 @@ public class ConnectDB extends javax.swing.JFrame {
     }// GEN-LAST:event_btnConnectActionPerformed
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtUsernameActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_txtUsernameActionPerformed
+
+    }
 
     private void txtHostActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtHostActionPerformed
         // TODO add your handling code here:
