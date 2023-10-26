@@ -1254,7 +1254,9 @@
                                   <Component id="btn_editUser" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btn_addUser" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="239" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btn_UserKey" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="158" max="32767" attributes="0"/>
                                   <Component id="btn_deleteUser" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1301,6 +1303,7 @@
                               <Component id="btn_editUser" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_addUser" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_deleteUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_UserKey" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1341,9 +1344,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Username">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel29">
                   <Properties>
@@ -1428,6 +1428,14 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_deleteUserActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btn_UserKey">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="T&#x1ea1;o Kh&#xf3;a"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_UserKeyActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
