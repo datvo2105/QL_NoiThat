@@ -12,7 +12,7 @@ public class QL_NoiThat {
     public static void main(String[] args) {
         try {
             DB.server = "0.tcp.ap.ngrok.io:17186:noithat";
-            DB.user = "kh1";
+            DB.user = "dev";
             DB.pass = "1";
             var conn = DB.getConnect();
 
