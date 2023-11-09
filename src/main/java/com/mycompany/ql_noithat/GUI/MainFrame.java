@@ -211,7 +211,6 @@ public class MainFrame extends javax.swing.JFrame {
                 jMenu2 = new javax.swing.JMenu();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                setUndecorated(true);
 
                 jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
                 jLabel1.setForeground(new java.awt.Color(51, 51, 51));
@@ -445,7 +444,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panel_SupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(tableSuplier)
-                                        .addComponent(infoSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE))
+                                        .addComponent(infoSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
 
@@ -1104,7 +1103,7 @@ public class MainFrame extends javax.swing.JFrame {
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 851, Short.MAX_VALUE)
+                        .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
                 );
 
                 pack();
