@@ -43,7 +43,6 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="menuPanel"/>
@@ -65,12 +64,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="mainPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="mainPanel" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="mainPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="mainPanel" min="-2" pref="786" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -124,7 +123,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="tableSuplier" alignment="0" max="32767" attributes="0"/>
-                          <Component id="infoSupplier" alignment="0" pref="813" max="32767" attributes="0"/>
+                          <Component id="infoSupplier" alignment="0" pref="700" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -640,7 +639,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jLabel18" alignment="0" pref="594" max="32767" attributes="0"/>
+                          <Component id="jLabel18" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -657,7 +656,7 @@
                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Component id="txt_CategoryName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="606" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -922,7 +921,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" alignment="1" pref="444" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
                               <Component id="txt_ProductId" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_ProductName" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_CategoryProduct" alignment="0" max="32767" attributes="0"/>
@@ -975,7 +974,7 @@
                           <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="254" max="-2" attributes="0"/>
-                          <EmptySpace pref="220" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btn_editProduct" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_addProduct" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1157,7 +1156,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="infoUser" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tableUser" alignment="0" pref="785" max="32767" attributes="0"/>
+                          <Component id="tableUser" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1217,9 +1216,6 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
-                  <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="listUserMouseClicked"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1242,7 +1238,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txt_Username" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_Password" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cb_UserRole" alignment="0" pref="466" max="32767" attributes="0"/>
+                              <Component id="cb_UserRole" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="btn_addUser" min="-2" max="-2" attributes="0"/>
@@ -1415,10 +1411,13 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="tableLog" alignment="0" pref="1168" max="32767" attributes="0"/>
+                              <Component id="tableLog" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btn_refleshLog" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="txt_checkKey" min="-2" pref="471" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btn_checkKey" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1429,7 +1428,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btn_refleshLog" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btn_refleshLog" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_checkKey" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_checkKey" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="tableLog" min="-2" pref="761" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1487,6 +1490,16 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="L&#xe0;m M&#x1edb;i"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_checkKey">
+                </Component>
+                <Component class="javax.swing.JButton" name="btn_checkKey">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="X&#xe1;c Th&#x1ef1;c"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_checkKeyActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
