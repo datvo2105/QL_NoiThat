@@ -36,7 +36,7 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         conn = DB.getConnect();
-        setExtendedState(MAXIMIZED_BOTH);
+	    setExtendedState(MAXIMIZED_BOTH);
     }
 
     private void InitData() {
@@ -445,7 +445,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panel_SupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(tableSuplier)
-                                        .addComponent(infoSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE))
+                                        .addComponent(infoSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
 
@@ -536,7 +536,7 @@ public class MainFrame extends javax.swing.JFrame {
                                                 .addComponent(btn_deleteCategory)))
                                 .addContainerGap())
                         .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 );
                 infoCategoryLayout.setVerticalGroup(
                         infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -552,7 +552,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_CategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoCategoryLayout.createSequentialGroup()
                                                 .addGroup(infoCategoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -717,7 +717,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(infoProductLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(infoProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(txt_ProductId)
                                         .addComponent(txt_ProductName)
                                         .addComponent(txt_CategoryProduct)
@@ -764,7 +764,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel23)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(infoProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(btn_editProduct)
                                         .addComponent(txt_addProduct)
@@ -894,7 +894,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addGroup(infoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txt_Username)
                                         .addComponent(txt_Password)
-                                        .addComponent(cb_UserRole, 0, 466, Short.MAX_VALUE)
+                                        .addComponent(cb_UserRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(infoUserLayout.createSequentialGroup()
                                                 .addGroup(infoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(btn_addUser)
@@ -976,7 +976,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panel_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(infoUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(tableUser, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE))
+                                        .addComponent(tableUser))
                                 .addContainerGap())
                 );
 
@@ -1100,11 +1100,11 @@ public class MainFrame extends javax.swing.JFrame {
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainPanel)
+                        .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING)
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainPanel)
+                        .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 851, Short.MAX_VALUE)
                 );
 
                 pack();
