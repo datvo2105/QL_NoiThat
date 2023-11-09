@@ -4,21 +4,14 @@
 
 package com.mycompany.ql_noithat;
 
-import com.mycompany.ql_noithat.DAL.DB;
-import com.mycompany.ql_noithat.GUI.MainFrame;
+import com.mycompany.ql_noithat.GUI.ConnectDB;
 
 public class QL_NoiThat {
 
     public static void main(String[] args) {
         try {
-            DB.server = "192.168.110.96:1521:noithat";
-            DB.user = "dev";
-            DB.pass = "1";
-            var conn = DB.getConnect();
+            new ConnectDB().setVisible(true);
 
-            if (conn == null)
-                throw new Error("connect faild");
-            new MainFrame().setVisible(true);
         } catch (Exception e) {
 
         }

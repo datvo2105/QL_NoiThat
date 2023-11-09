@@ -10,7 +10,7 @@ public class LoggerDb {
         List<Logger> Loggers = new ArrayList<>();
         try {
             PreparedStatement statement = DB.getConnect().prepareStatement(
-                    "SELECT * FROM LOGIN_LOG");
+                    "SELECT * FROM DEV.LOGIN_LOG");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

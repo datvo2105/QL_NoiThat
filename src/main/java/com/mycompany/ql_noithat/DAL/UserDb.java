@@ -29,7 +29,7 @@ public class UserDb {
     }
 
     public boolean createUserKhachHang(User user) {
-        String insertQuery = "{CALL CREATE_USER_KHACH_HANG(?,?)}";
+        String insertQuery = "{CALL DEV.CREATE_USER_KHACH_HANG(?,?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -46,7 +46,7 @@ public class UserDb {
     }
 
     public boolean createUserQuanLi(User user) {
-        String insertQuery = "{CALL CREATE_USER_QUAN_LI(?,?)}";
+        String insertQuery = "{CALL DEV.CREATE_USER_QUAN_LI(?,?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {

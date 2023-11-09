@@ -10,7 +10,8 @@ public class CategoryDB {
     public List<Category> getAllCategory() {
         List<Category> categories = new ArrayList<>();
         try {
-            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(GET_PRODUCT_C(''))");
+            PreparedStatement statement = DB.getConnect()
+                    .prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCT_C(''))");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -27,7 +28,7 @@ public class CategoryDB {
     }
 
     public boolean createCategory(Category category) {
-        String insertQuery = "{CALL ADDPRODUCTCATEGORY(?)}";
+        String insertQuery = "{CALL DEV.ADDPRODUCTCATEGORY(?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -44,7 +45,7 @@ public class CategoryDB {
     }
 
     public boolean updateCategory(Category category) {
-        String insertQuery = "{CALL UPDATEPRODUCTCATEGORY(?,?)}";
+        String insertQuery = "{CALL DEV.UPDATEPRODUCTCATEGORY(?,?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
@@ -62,7 +63,7 @@ public class CategoryDB {
     }
 
     public boolean deleteCategory(int id) {
-        String insertQuery = "{CALL DELETEPRODUCTCATEGORY(?)}";
+        String insertQuery = "{CALL DEV.DELETEPRODUCTCATEGORY(?)}";
 
         try (
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
