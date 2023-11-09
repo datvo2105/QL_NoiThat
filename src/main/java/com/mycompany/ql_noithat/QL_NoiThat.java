@@ -11,7 +11,7 @@ public class QL_NoiThat {
 
     public static void main(String[] args) {
         try {
-            DB.server = "0.tcp.ap.ngrok.io:17186:noithat";
+            DB.server = "localhost:1521:noithat";
             DB.user = "dev";
             DB.pass = "1";
             var conn = DB.getConnect();
