@@ -2,8 +2,10 @@ com\mycompany\ql_noithat\GUI\ConnectDB.class
 com\mycompany\ql_noithat\GUI\MainFrame$3.class
 com\mycompany\ql_noithat\DAL\RSAOracle.class
 com\mycompany\ql_noithat\QL_NoiThat.class
+com\mycompany\ql_noithat\GUI\MainFrame$33.class
 com\mycompany\ql_noithat\DAL\User.class
 com\mycompany\ql_noithat\GUI\MainFrame$23.class
+com\mycompany\ql_noithat\DAL\Logger.class
 com\mycompany\ql_noithat\GUI\MainFrame$30.class
 com\mycompany\ql_noithat\GUI\ConnectDB$1.class
 com\mycompany\ql_noithat\GUI\MainFrame$7.class
@@ -12,6 +14,8 @@ com\mycompany\ql_noithat\DAL\ProductDB.class
 com\mycompany\ql_noithat\GUI\MainFrame$27.class
 com\mycompany\ql_noithat\GUI\MainFrame$4.class
 com\mycompany\ql_noithat\DAL\UserDb.class
+com\mycompany\ql_noithat\DAL\Key.class
+com\mycompany\ql_noithat\DAL\LoggerDb.class
 com\mycompany\ql_noithat\GUI\MainFrame$28.class
 com\mycompany\ql_noithat\GUI\ConnectDB$3.class
 com\mycompany\ql_noithat\GUI\MainFrame$8.class
