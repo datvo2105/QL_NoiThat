@@ -876,6 +876,11 @@ public class MainFrame extends javax.swing.JFrame {
                                 return canEdit [columnIndex];
                         }
                 });
+                listUser.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                listUserMouseClicked(evt);
+                        }
+                });
                 tableUser.setViewportView(listUser);
 
                 infoUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1146,6 +1151,10 @@ public class MainFrame extends javax.swing.JFrame {
 		this.dispose();
 		new ConnectDB().setVisible(true);
         }//GEN-LAST:event_btn_logoutActionPerformed
+
+        private void listUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listUserMouseClicked
+                // TODO add your handling code here:
+        }//GEN-LAST:event_listUserMouseClicked
 
     private void btn_checkKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_checkKeyActionPerformed
         try {

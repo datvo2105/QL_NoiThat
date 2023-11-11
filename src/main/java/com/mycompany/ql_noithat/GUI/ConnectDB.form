@@ -125,7 +125,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtHost">
       <Properties>
-        <Property name="text" type="java.lang.String" value="localhost"/>
+        <Property name="text" type="java.lang.String" value="192.168.23.204"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHostActionPerformed"/>
@@ -146,7 +146,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtSID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="qlks"/>
+        <Property name="text" type="java.lang.String" value="noithat"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">

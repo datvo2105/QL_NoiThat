@@ -50,7 +50,7 @@ public class ConnectDB extends javax.swing.JFrame {
                 jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
                 jLabel2.setText("Host:");
 
-                txtHost.setText("localhost");
+                txtHost.setText("192.168.23.204");
                 txtHost.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 txtHostActionPerformed(evt);
@@ -62,7 +62,7 @@ public class ConnectDB extends javax.swing.JFrame {
 
                 txtPort.setText("1521");
 
-                txtSID.setText("qlks");
+                txtSID.setText("noithat");
 
                 jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
                 jLabel4.setText("SID:");
