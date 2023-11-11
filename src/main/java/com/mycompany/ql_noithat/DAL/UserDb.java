@@ -11,7 +11,7 @@ public class UserDb {
         List<User> users = new ArrayList<>();
         try {
             PreparedStatement statement = DB.getConnect().prepareStatement(
-                    "SELECT * FROM ALL_USERS WHERE ALL_USERS.ORACLE_MAINTAINED = 'N' AND USERNAME != 'SCOTT'");
+                    "SELECT * FROM ALL_USERS");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

@@ -25,6 +25,10 @@ public class DB {
             }
             Class.forName("oracle.jdbc.driver.OracleDriver");
             conn = DriverManager.getConnection(url + server, user, pass);
+            Statement statement = conn.createStatement();
+            statement.execute("ALTER SESSION SET \"_ORACLE_SCRIPT\"=true");
+            statement.close();
+
             return conn;
         } catch (ClassNotFoundException | SQLException e) {
             return null;
