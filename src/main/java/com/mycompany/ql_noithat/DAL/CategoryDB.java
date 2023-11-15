@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryDB {
-    public List<Category> getAllCategory() {
+    public List<Category> getAllCategory(String search) {
         List<Category> categories = new ArrayList<>();
         try {
             PreparedStatement statement = DB.getConnect()
-                    .prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCT_C(''))");
+                    .prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCT_C(?))");
+            statement.setString(1, search);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

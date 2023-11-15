@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDB {
-    public List<Product> getAllProducts() {
+    public List<Product> getAllProducts(String search) {
         List<Product> products = new ArrayList<>();
         try {
-            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCTS(''))");
+            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_PRODUCTS(?))");
+            statement.setString(1, search);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

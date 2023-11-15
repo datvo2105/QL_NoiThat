@@ -7,10 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierDB {
-    public List<Supplier> getAllSuppliers() {
+    public List<Supplier> getAllSuppliers(String search) {
         List<Supplier> suppliers = new ArrayList<>();
+
         try {
-            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_SUPPLIER(''))");
+            PreparedStatement statement = DB.getConnect().prepareStatement("SELECT * FROM TABLE(DEV.GET_SUPPLIER(?))");
+            statement.setString(1, search);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {

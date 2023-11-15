@@ -62,4 +62,18 @@ public class UserDb {
         }
     }
 
+    public boolean deleteUser(String user_nameString) {
+        String insertQuery = "{CALL DEV.DELETE_USER_AND_LOGIN(?)}";
+
+        try (
+                PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
+            statement.setString(1, user_nameString);
+            int rowsInserted = statement.executeUpdate();
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
