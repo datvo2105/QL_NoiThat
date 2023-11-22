@@ -1248,7 +1248,8 @@ public class MainFrame extends javax.swing.JFrame {
         try {
             String key = txt_checkKey.getText();
 
-            String decode = rsaOracle.decrypt(rsaOracle.encrypt(Key.pay_load, key),
+            String decode = rsaOracle.decrypt(
+                    rsaOracle.encrypt(Key.pay_load, key),
                     Key.private_key);
 
             if (!decode.equals(Key.pay_load)) {

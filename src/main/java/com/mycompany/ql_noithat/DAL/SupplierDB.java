@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierDB {
+    // hàm get all supplier trong db
     public List<Supplier> getAllSuppliers(String search) {
         List<Supplier> suppliers = new ArrayList<>();
 
@@ -37,6 +38,7 @@ public class SupplierDB {
         return suppliers;
     }
 
+    // hàm tạo supplier trong db
     public boolean createSupplier(Supplier supplier) {
         String insertQuery = "{CALL DEV.INSERTSUPPLIER(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
