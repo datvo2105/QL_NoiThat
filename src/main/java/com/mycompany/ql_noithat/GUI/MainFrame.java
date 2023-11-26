@@ -222,6 +222,7 @@ public class MainFrame extends javax.swing.JFrame {
                 cb_UserRole = new javax.swing.JComboBox<>();
                 btn_addUser = new javax.swing.JButton();
                 btn_deleteUser = new javax.swing.JButton();
+                btn_generatorKey = new javax.swing.JButton();
                 txt_searchUser = new javax.swing.JTextField();
                 btn_searchUser = new javax.swing.JButton();
                 user_txtKey = new javax.swing.JTextField();
@@ -442,6 +443,11 @@ public class MainFrame extends javax.swing.JFrame {
                 });
 
                 sup_btnKey.setText("Check");
+                sup_btnKey.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                sup_btnKeyActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_SupplierLayout = new javax.swing.GroupLayout(panel_Supplier);
                 panel_Supplier.setLayout(panel_SupplierLayout);
@@ -628,6 +634,11 @@ public class MainFrame extends javax.swing.JFrame {
                 });
 
                 cate_btnKey.setText("Check");
+                cate_btnKey.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                cate_btnKeyActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_CategoryLayout = new javax.swing.GroupLayout(panel_Category);
                 panel_Category.setLayout(panel_CategoryLayout);
@@ -830,6 +841,11 @@ public class MainFrame extends javax.swing.JFrame {
                 });
 
                 pro_btnKey.setText("Check");
+                pro_btnKey.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                pro_btnKeyActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_ProductLayout = new javax.swing.GroupLayout(panel_Product);
                 panel_Product.setLayout(panel_ProductLayout);
@@ -947,6 +963,13 @@ public class MainFrame extends javax.swing.JFrame {
                         }
                 });
 
+                btn_generatorKey.setText("Tạo Khóa");
+                btn_generatorKey.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btn_generatorKeyActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout infoUserLayout = new javax.swing.GroupLayout(infoUser);
                 infoUser.setLayout(infoUserLayout);
                 infoUserLayout.setHorizontalGroup(
@@ -967,7 +990,9 @@ public class MainFrame extends javax.swing.JFrame {
                                                         .addGroup(infoUserLayout.createSequentialGroup()
                                                                 .addComponent(btn_addUser)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(btn_deleteUser)))
+                                                                .addComponent(btn_deleteUser)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(btn_generatorKey)))
                                                 .addGap(0, 0, Short.MAX_VALUE)))
                                 .addContainerGap())
                 );
@@ -992,7 +1017,8 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(infoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(btn_addUser)
-                                        .addComponent(btn_deleteUser))
+                                        .addComponent(btn_deleteUser)
+                                        .addComponent(btn_generatorKey))
                                 .addContainerGap())
                 );
 
@@ -1016,6 +1042,11 @@ public class MainFrame extends javax.swing.JFrame {
                 });
 
                 user_btnKey.setText("Check");
+                user_btnKey.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                user_btnKeyActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout panel_UserLayout = new javax.swing.GroupLayout(panel_User);
                 panel_User.setLayout(panel_UserLayout);
@@ -1025,7 +1056,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addGroup(panel_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(panel_UserLayout.createSequentialGroup()
-                                                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                                                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
                                                 .addGap(908, 908, 908))
                                         .addGroup(panel_UserLayout.createSequentialGroup()
                                                 .addComponent(tableUser, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1059,7 +1090,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panel_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(infoUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(tableUser))
+                                        .addComponent(tableUser, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
 
@@ -1192,6 +1223,26 @@ public class MainFrame extends javax.swing.JFrame {
         private void user_txtKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_txtKeyActionPerformed
                 // TODO add your handling code here:
         }//GEN-LAST:event_user_txtKeyActionPerformed
+
+        private void sup_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sup_btnKeyActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_sup_btnKeyActionPerformed
+
+        private void cate_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cate_btnKeyActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_cate_btnKeyActionPerformed
+
+        private void pro_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pro_btnKeyActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_pro_btnKeyActionPerformed
+
+        private void user_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_btnKeyActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_user_btnKeyActionPerformed
+
+        private void btn_generatorKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generatorKeyActionPerformed
+                // TODO add your handling code here:
+        }//GEN-LAST:event_btn_generatorKeyActionPerformed
 
     private void btn_deleteUserActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_deleteUserActionPerformed
         if (userSelected != null) {
@@ -1586,6 +1637,7 @@ public class MainFrame extends javax.swing.JFrame {
         private javax.swing.JButton btn_editCategory;
         private javax.swing.JButton btn_editProduct;
         private javax.swing.JButton btn_editSupplier;
+        private javax.swing.JButton btn_generatorKey;
         private javax.swing.JMenuItem btn_logout;
         private javax.swing.JButton btn_refleshCategory;
         private javax.swing.JButton btn_refleshLog;
