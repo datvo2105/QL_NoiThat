@@ -86,7 +86,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel1" max="32767" attributes="0"/>
+                              <Component id="jLabel1" pref="278" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btn_refleshSupplier" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -96,8 +96,15 @@
                           </Group>
                           <Component id="tableSuplier" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="infoSupplier" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="infoSupplier" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="sup_txtKey" min="-2" pref="284" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sup_btnKey" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -111,6 +118,8 @@
                           <Component id="btn_refleshSupplier" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_searchSupplier" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_searchSupplier" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sup_txtKey" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sup_btnKey" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -501,6 +510,13 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_searchSupplierActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JTextField" name="sup_txtKey">
+            </Component>
+            <Component class="javax.swing.JButton" name="sup_btnKey">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Check"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panel_Category">
@@ -525,12 +541,15 @@
                               <Component id="txt_searchCategory" min="-2" pref="255" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btn_seachCategory" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="cat_txtCheck" min="-2" pref="312" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cate_btnKey" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel3" alignment="0" pref="1192" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -542,6 +561,8 @@
                           <Component id="btn_refleshCategory" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_searchCategory" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_seachCategory" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cat_txtCheck" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cate_btnKey" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel3" max="32767" attributes="0"/>
@@ -758,6 +779,13 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_seachCategoryActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JTextField" name="cat_txtCheck">
+            </Component>
+            <Component class="javax.swing.JButton" name="cate_btnKey">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Check"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panel_Product">
@@ -774,23 +802,27 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel16" pref="278" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="908" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btn_refleshProduct" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="txt_searchProduct" min="-2" pref="230" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btn_searchProduct" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="tableProduct" min="-2" pref="849" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="infoProduct" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btn_refleshProduct" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="txt_searchProduct" min="-2" pref="230" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btn_searchProduct" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="pro_txtKey" min="-2" pref="304" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pro_btnKey" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -807,6 +839,8 @@
                           <Component id="btn_refleshProduct" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_searchProduct" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_searchProduct" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pro_txtKey" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pro_btnKey" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1093,6 +1127,13 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_searchProductActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JTextField" name="pro_txtKey">
+            </Component>
+            <Component class="javax.swing.JButton" name="pro_btnKey">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Check"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panel_User">
@@ -1115,17 +1156,21 @@
                               <EmptySpace min="-2" pref="908" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="btn_refleshUser" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="txt_searchUser" min="-2" pref="225" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btn_searchUser" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Component id="tableUser" min="-2" pref="771" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="infoUser" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btn_refleshUser" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="328" max="-2" attributes="0"/>
+                              <Component id="txt_searchUser" min="-2" pref="225" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btn_searchUser" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="user_txtKey" min="-2" pref="339" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="user_btnKey" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1142,6 +1187,8 @@
                           <Component id="btn_refleshUser" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_searchUser" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_searchUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_txtKey" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_btnKey" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1361,6 +1408,16 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_searchUserActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="user_txtKey">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="user_txtKeyActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="user_btnKey">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Check"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

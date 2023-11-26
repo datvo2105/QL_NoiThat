@@ -6,10 +6,6 @@ package com.mycompany.ql_noithat.DAL;
 
 import java.sql.*;
 
-/**
- *
- * @author vogiadat
- */
 public class DB {
 
     public static Connection conn;
