@@ -1328,20 +1328,21 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void user_txtKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_user_txtKeyActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_user_txtKeyActionPerformed
+
+    }
 
     private void sup_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sup_btnKeyActionPerformed
         try {
             String encodeString = sup_txtKey.getText();
             boolean isAllow = userKey.Validate(DB.user, encodeString);
 
-            if (isAllow) {
+            if (isAllow == true) {
                 initSupplier("");
                 return;
             }
 
-            throw new Error("not allow");
+            JOptionPane.showMessageDialog(rootPane,
+                    "error security");
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane,
@@ -1352,11 +1353,44 @@ public class MainFrame extends javax.swing.JFrame {
     }// GEN-LAST:event_sup_btnKeyActionPerformed
 
     private void cate_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cate_btnKeyActionPerformed
-        // TODO add your handling code here:
+        try {
+            String encodeString = cat_txtCheck.getText();
+            boolean isAllow = userKey.Validate(DB.user, encodeString);
+
+            if (isAllow == true) {
+                initCategory("");
+                return;
+            }
+
+            JOptionPane.showMessageDialog(rootPane,
+                    "error security");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane,
+                    "error security");
+
+        }
+
     }// GEN-LAST:event_cate_btnKeyActionPerformed
 
     private void pro_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_pro_btnKeyActionPerformed
-        // TODO add your handling code here:
+        try {
+            String encodeString = pro_txtKey.getText();
+            boolean isAllow = userKey.Validate(DB.user, encodeString);
+
+            if (isAllow == true) {
+                initProduct("");
+                return;
+            }
+
+            JOptionPane.showMessageDialog(rootPane,
+                    "error security");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane,
+                    "error security");
+
+        }
     }// GEN-LAST:event_pro_btnKeyActionPerformed
 
     private void user_btnKeyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_user_btnKeyActionPerformed

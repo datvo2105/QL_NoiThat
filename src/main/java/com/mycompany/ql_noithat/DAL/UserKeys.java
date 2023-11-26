@@ -66,7 +66,7 @@ public class UserKeys {
 
             }
 
-            return true;
+            return false;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
