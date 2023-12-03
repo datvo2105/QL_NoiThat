@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierDB {
-    // hàm get all supplier trong db
+    RSAManager rsa = new RSAManager(Key.private_key, Key.public_key);
+
     public List<Supplier> getAllSuppliers(String search) {
         List<Supplier> suppliers = new ArrayList<>();
 
@@ -21,8 +22,8 @@ public class SupplierDB {
                 supplier.setSupplierId(resultSet.getInt("SUPPLIER_ID"));
                 supplier.setSupplierName(resultSet.getString("SUPPLIER_NAME"));
                 supplier.setContactName(resultSet.getString("CONTACT_NAME"));
-                supplier.setContactEmail(resultSet.getString("CONTACT_EMAIL"));
-                supplier.setContactPhone(resultSet.getString("CONTACT_PHONE"));
+                supplier.setContactEmail(rsa.decrypt(resultSet.getString("CONTACT_EMAIL")));
+                supplier.setContactPhone(rsa.decrypt(resultSet.getString("CONTACT_PHONE")));
                 supplier.setAddress(resultSet.getString("ADDRESS"));
                 supplier.setCity(resultSet.getString("CITY"));
                 supplier.setState(resultSet.getString("STATE"));
@@ -46,8 +47,8 @@ public class SupplierDB {
                 PreparedStatement statement = DB.getConnect().prepareCall(insertQuery)) {
             statement.setString(1, supplier.getSupplierName());
             statement.setString(2, supplier.getContactName());
-            statement.setString(3, supplier.getContactEmail());
-            statement.setString(4, supplier.getContactPhone());
+            statement.setString(3, rsa.encrypt(supplier.getContactEmail()));
+            statement.setString(4, rsa.encrypt(supplier.getContactPhone()));
             statement.setString(5, supplier.getAddress());
             statement.setString(6, supplier.getCity());
             statement.setString(7, supplier.getState());
@@ -72,8 +73,8 @@ public class SupplierDB {
             statement.setInt(1, supplier.getSupplierId());
             statement.setString(2, supplier.getSupplierName());
             statement.setString(3, supplier.getContactName());
-            statement.setString(4, supplier.getContactEmail());
-            statement.setString(5, supplier.getContactPhone());
+            statement.setString(4, rsa.encrypt(supplier.getContactEmail()));
+            statement.setString(5, rsa.encrypt(supplier.getContactPhone()));
             statement.setString(6, supplier.getAddress());
             statement.setString(7, supplier.getCity());
             statement.setString(8, supplier.getState());
