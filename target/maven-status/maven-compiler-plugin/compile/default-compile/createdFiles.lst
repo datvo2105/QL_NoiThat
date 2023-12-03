@@ -1,6 +1,7 @@
 com\mycompany\ql_noithat\GUI\ConnectDB.class
 com\mycompany\ql_noithat\GUI\MainFrame$3.class
 com\mycompany\ql_noithat\DAL\RSAOracle.class
+com\mycompany\ql_noithat\DAL\Sha.class
 com\mycompany\ql_noithat\QL_NoiThat.class
 com\mycompany\ql_noithat\GUI\MainFrame$33.class
 com\mycompany\ql_noithat\DAL\User.class
